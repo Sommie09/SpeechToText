@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Button speakButton;
     EditText text;
+    Button listen;
 
     private static final int RECOGNIZER_RESULT = 1;
 
