@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
         speakButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent speechIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-//                speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-//                speechIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech to Text");
-//                startActivityForResult(speechIntent, 1);
+                Intent speechIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                speechIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                speechIntent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech to Text");
+                startActivityForResult(speechIntent, 1);
             }
         });
     }
