@@ -9,12 +9,13 @@ import android.speech.RecognizerIntent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    Button speakButton;
+    LinearLayout speakButton;
     EditText text;
     Button listen;
 
@@ -40,13 +41,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//
-//        if(requestCode == RECOGNIZER_RESULT && resultCode == RESULT_OK){
-//            ArrayList<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-//            text.setText(matches.get(0));
-//        }
-//        super.onActivityResult(requestCode, resultCode, data);
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if(requestCode == RECOGNIZER_RESULT && resultCode == RESULT_OK){
+            ArrayList<String> matches = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            text.setText(matches.get(0));
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }
